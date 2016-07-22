@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using System.Web.Optimization.React;
 
 namespace ReactMVC45
 {
@@ -26,6 +27,8 @@ namespace ReactMVC45
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
 					  "~/Content/site.css"));
+			bundles.Add(new BabelBundle("~/bundles/main").Include("~/Scripts/App/CommentBox/CommentBox.jsx"));
+			BundleTable.EnableOptimizations = true;
 		}
 	}
 }

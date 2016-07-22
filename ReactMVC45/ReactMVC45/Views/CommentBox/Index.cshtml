@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ReactMVC45.Models.CommentModel>
+<div id="commentBox"></div>
+
+@*@Html.React("CommentBox", new
+{
+	initialData = Model,
+	url = Url.Action("/commentbox/comments"),
+	submitUrl = Url.Action("/commentbox/AddComment"),
+	pollInterval = 2000,
+})*@
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/main")
+	@*<script src="@Url.Content("~/Scripts/App/CommentBox/CommentBox.jsx")"></script>*@
+}
+
+
+@Html.ReactInitJavaScript()
